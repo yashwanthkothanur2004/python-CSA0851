@@ -1,0 +1,25 @@
+
+def separate_letters(word):
+    word = word.lower()
+    vowels = []
+    consonants = []
+
+    for char in word:
+        if char.isalpha():
+            if char in 'aeiou':
+                vowels.append(char)
+            else:
+                consonants.append(char)
+
+    vowels = sorted(set(vowels))
+    consonants = sorted(set(consonants))
+
+    print("Vowels in alphabetical order:", ', '.join(vowels))
+    print("Consonants in alphabetical order:", ', '.join(consonants))
+
+words = ["EDUCATION", "HYPOTHECATION", "MATRICULATION", "MANIPULATION", "SEDIMENTATION", "EXPERIMENTATION"]
+
+for word in words:
+    print(f"Input: {word}")
+    separate_letters(word)
+    print()

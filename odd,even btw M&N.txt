@@ -1,0 +1,14 @@
+
+def count_odd_even(m, n):
+    odd_count = (n + 1) // 2 - m // 2
+    even_count = (n // 2) - (m - 1) // 2
+
+    print(f"Number of Odd Numbers = {odd_count}")
+    print(f"Number of Even Numbers = {even_count}")
+
+test_cases = [(60, 300), (100, 200), (50, 50), (-10, 10), (1, 100), (0, 100)]
+
+for m, n in test_cases:
+    print(f"M = {m}, N = {n}")
+    count_odd_even(m, n)
+    print()

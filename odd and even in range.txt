@@ -1,0 +1,14 @@
+
+def print_odd_even(m, n):
+    odd_nums = [i for i in range(m, n+1) if i % 2 != 0]
+    even_nums = [i for i in range(m, n+1) if i % 2 == 0]
+
+    print(f"All Odd Numbers = {', '.join(map(str, odd_nums))}")
+    print(f"All Even Numbers = {', '.join(map(str, even_nums))}")
+
+test_cases = [(6, 15), (100, 100), (500, 100), (-5, 4), (72, -72), (0, 0)]
+
+for m, n in test_cases:
+    print(f"M = {m}, N = {n}")
+    print_odd_even(m, n)
+    print()
